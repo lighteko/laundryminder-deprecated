@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-enum Dorms { aw, am, bw, bm }
-
 class StartingPage extends StatefulWidget {
   const StartingPage({super.key});
 
