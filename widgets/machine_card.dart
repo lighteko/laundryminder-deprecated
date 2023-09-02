@@ -22,7 +22,7 @@ class _MachineCardState extends State<MachineCard> {
     }
     switch (cardType) {
       case 1:
-        return const Color(0xffDDE7FF);
+        return const Color(0xff9DB5F4);
       case 2:
         return const Color(0xffFFDCF1);
       case 3:
