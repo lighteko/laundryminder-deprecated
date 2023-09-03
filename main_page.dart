@@ -17,6 +17,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      color: Colors.white,
       home: Scaffold(
         appBar: AppBar(
           systemOverlayStyle: const SystemUiOverlayStyle(
@@ -25,6 +26,7 @@ class _MainPageState extends State<MainPage> {
             statusBarBrightness: Brightness.light,
           ),
           backgroundColor: Colors.transparent,
+          shadowColor: Colors.white,
           bottomOpacity: 0.0,
           elevation: 0.0,
         ),
