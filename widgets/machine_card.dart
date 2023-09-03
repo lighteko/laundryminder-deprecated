@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_card_types.dart';
@@ -15,6 +17,8 @@ class MachineCard extends StatefulWidget {
 }
 
 class _MachineCardState extends State<MachineCard> {
+  late Timer timer;
+  int totalTime = 50 * 60;
   Color cardColor(int cardType, bool isUsing) {
     if (cardType == MachineCardTypes.washer && isUsing == true) {
       return const Color(0xff1E3163);
@@ -65,9 +69,23 @@ class _MachineCardState extends State<MachineCard> {
     }
   }
 
+  String timeString(int totalTime) {
+    return "${totalTime ~/ 60} m ${totalTime % 60} s";
+  }
+
+  void onTick(Timer timer) {
+    setState(() {
+      totalTime -= 1;
+    });
+  }
+
   @override
   void initState() {
     super.initState();
+    timer = Timer.periodic(
+      const Duration(seconds: 1),
+      onTick,
+    );
   }
 
   @override
@@ -109,7 +127,7 @@ class _MachineCardState extends State<MachineCard> {
                   ),
                 ),
                 Text(
-                  "06 m 35 s",
+                  timeString(totalTime),
                   style: TextStyle(
                     fontSize: 41,
                     fontWeight: FontWeight.bold,
