@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/washer_running.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/washer.dart';
 
 class MachineCard extends StatefulWidget {
   final int cardType;

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class Machine extends StatefulWidget {
+class Machine extends StatefulWidget {
   const Machine({super.key});
 
   @override

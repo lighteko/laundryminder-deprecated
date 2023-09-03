@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machine_card.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/washer_running.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/shoe_washer_running.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/dryer_running.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/washer.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/shoe_washer.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/dryer.dart';
 import 'widgets/title_text.dart';
 
 class MainPage extends StatefulWidget {
@@ -50,7 +50,12 @@ class _MainPageState extends State<MainPage> {
                     SizedBox(
                       width: 10,
                     ),
-                    SizedBox(height: 45, child: DryerRunning()),
+                    SizedBox(
+                        height: 45,
+                        child: Dryer(
+                          code: 1,
+                          isRunning: false,
+                        )),
                   ],
                 ),
               ),
