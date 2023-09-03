@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class Washer extends StatelessWidget {
-  final int code;
+class ShoeDryer extends StatelessWidget {
   final bool isRunning;
-  const Washer({
+  final int code;
+  const ShoeDryer({
     required this.code,
     required this.isRunning,
     super.key,
@@ -13,10 +13,10 @@ class Washer extends StatelessWidget {
   Widget build(BuildContext context) {
     return isRunning
         ? const Image(
-            image: AssetImage("assets/icons/washer_running.gif"),
+            image: AssetImage("assets/icons/shoe_dryer_running.gif"),
           )
         : const Image(
-            image: AssetImage("assets/icons/washer_vacant.png"),
+            image: AssetImage("assets/icons/shoe_dryer_vacant.png"),
           );
   }
 }

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machine_card.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/washer.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/shoe_washer.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/dryer.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine_types.dart';
 import 'widgets/title_text.dart';
 
 class MainPage extends StatefulWidget {
@@ -42,20 +41,30 @@ class _MainPageState extends State<MainPage> {
                 ),
                 child: Row(
                   children: [
-                    SizedBox(height: 45, child: WasherRunning()),
+                    Machine(
+                      size: 45,
+                      code: 1,
+                      machineType: MachineTypes.washer,
+                      isRunning: true,
+                    ),
                     SizedBox(
                       width: 10,
                     ),
-                    SizedBox(height: 45, child: ShoeWasherRunning()),
+                    Machine(
+                      size: 45,
+                      code: 1,
+                      machineType: MachineTypes.dryer,
+                      isRunning: false,
+                    ),
                     SizedBox(
                       width: 10,
                     ),
-                    SizedBox(
-                        height: 45,
-                        child: Dryer(
-                          code: 1,
-                          isRunning: false,
-                        )),
+                    Machine(
+                      size: 45,
+                      code: 1,
+                      machineType: MachineTypes.shoeWasher,
+                      isRunning: true,
+                    ),
                   ],
                 ),
               ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/washer.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine_types.dart';
 
 class MachineCard extends StatefulWidget {
   final int cardType;
@@ -50,7 +51,11 @@ class _MachineCardState extends State<MachineCard> {
               child: SizedBox(
                 width: 90,
                 height: 90,
-                child: WasherRunning(),
+                child: Machine(
+                    size: 90,
+                    code: 2,
+                    machineType: MachineTypes.washer,
+                    isRunning: true),
               ),
             ),
             Column(
