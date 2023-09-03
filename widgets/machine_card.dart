@@ -66,6 +66,11 @@ class _MachineCardState extends State<MachineCard> {
   }
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     int cardType = widget.machineType.abs();
     int machineType = widget.machineType;
