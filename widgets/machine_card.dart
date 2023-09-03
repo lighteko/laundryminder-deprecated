@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine_types.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_card_types.dart';
 
 class MachineCard extends StatefulWidget {
-  final int cardType;
+  final int machineType;
   final bool isUsing;
   const MachineCard({
     super.key,
-    required this.cardType,
+    required this.machineType,
     required this.isUsing,
   });
   @override
@@ -15,19 +15,51 @@ class MachineCard extends StatefulWidget {
 }
 
 class _MachineCardState extends State<MachineCard> {
-  Color colorReturner(int cardType, bool isUsing) {
-    if (cardType == 1 && isUsing == true) {
+  Color cardColor(int cardType, bool isUsing) {
+    if (cardType == MachineCardTypes.washer && isUsing == true) {
       return const Color(0xff1E3163);
-    } else if (cardType == 2 && isUsing == true) {
+    } else if (cardType == MachineCardTypes.dryer && isUsing == true) {
       return const Color(0xff7C0016);
     }
     switch (cardType) {
-      case 1:
+      case MachineCardTypes.washer:
         return const Color(0xff9DB5F4);
-      case 2:
-        return const Color(0xffFFDCF1);
-      case 3:
+      case MachineCardTypes.dryer:
+        return const Color(0xffEE9595);
+      case MachineCardTypes.disabled:
         return const Color(0xffABABAB);
+      default:
+        return const Color(0xffFFFFFF);
+    }
+  }
+
+  Color machineIndexColor(int cardType, bool isUsing) {
+    if (isUsing == true) {
+      return const Color(0xffFFFFFF);
+    }
+    switch (cardType) {
+      case MachineCardTypes.washer:
+        return const Color(0xff064667);
+      case MachineCardTypes.dryer:
+        return const Color(0xffB83C40);
+      case MachineCardTypes.disabled:
+        return const Color(0xff525252);
+      default:
+        return const Color(0xffFFFFFF);
+    }
+  }
+
+  Color machineTimeColor(int cardType, bool isUsing) {
+    if (isUsing == true) {
+      return const Color(0xffFFFFFF);
+    }
+    switch (cardType) {
+      case MachineCardTypes.washer:
+        return const Color(0xff4066B0);
+      case MachineCardTypes.dryer:
+        return const Color(0xff9F292E);
+      case MachineCardTypes.disabled:
+        return const Color(0xffE0E0E0);
       default:
         return const Color(0xffFFFFFF);
     }
@@ -35,7 +67,8 @@ class _MachineCardState extends State<MachineCard> {
 
   @override
   Widget build(BuildContext context) {
-    int cardType = widget.cardType;
+    int cardType = widget.machineType.abs();
+    int machineType = widget.machineType;
     bool isUsing = widget.isUsing;
     return GestureDetector(
       child: Container(
@@ -43,18 +76,18 @@ class _MachineCardState extends State<MachineCard> {
         height: 100,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: colorReturner(cardType, isUsing)),
-        child: const Row(
+            color: cardColor(cardType, isUsing)),
+        child: Row(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
               child: SizedBox(
                 width: 90,
                 height: 90,
                 child: Machine(
                     size: 90,
                     code: 2,
-                    machineType: MachineTypes.washer,
+                    machineType: machineType,
                     isRunning: true),
               ),
             ),
@@ -67,7 +100,7 @@ class _MachineCardState extends State<MachineCard> {
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: machineIndexColor(cardType, isUsing),
                   ),
                 ),
                 Text(
@@ -75,7 +108,7 @@ class _MachineCardState extends State<MachineCard> {
                   style: TextStyle(
                     fontSize: 41,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: machineTimeColor(cardType, isUsing),
                     height: 0.8,
                   ),
                 ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/dryer.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine_types.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_types.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/shoe_dryer.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/shoe_washer.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/washer.dart';

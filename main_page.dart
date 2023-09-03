@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machine_card.dart';
 import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine_types.dart';
+import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_types.dart';
 import 'widgets/title_text.dart';
 
 class MainPage extends StatefulWidget {
@@ -72,7 +72,7 @@ class _MainPageState extends State<MainPage> {
               Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
                 child: MachineCard(
-                  cardType: 1,
+                  machineType: MachineTypes.washer,
                   isUsing: true,
                 ),
               ),
@@ -84,14 +84,14 @@ class _MainPageState extends State<MainPage> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: MachineCard(
-                        cardType: 2,
+                        machineType: MachineTypes.dryer,
                         isUsing: false,
                       ),
                     ),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: MachineCard(
-                        cardType: 1,
+                        machineType: MachineTypes.shoeWasher,
                         isUsing: false,
                       ),
                     ),
