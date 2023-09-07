@@ -14,6 +14,7 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           systemOverlayStyle: const SystemUiOverlayStyle(
             statusBarColor: Colors.white,
@@ -21,7 +22,6 @@ class MainApp extends StatelessWidget {
             statusBarBrightness: Brightness.light,
           ),
           backgroundColor: Colors.transparent,
-          shadowColor: Colors.white,
           bottomOpacity: 0.0,
           elevation: 0.0,
         ),

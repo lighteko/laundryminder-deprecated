@@ -27,16 +27,7 @@ class _StartingPageState extends State<StartingPage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: Colors.white,
-            statusBarIconBrightness: Brightness.dark,
-            statusBarBrightness: Brightness.light,
-          ),
-          backgroundColor: Colors.transparent,
-          bottomOpacity: 0.0,
-          elevation: 0.0,
-        ),
+        backgroundColor: Colors.white,
         body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
