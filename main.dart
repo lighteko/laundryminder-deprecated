@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:laundryminder/main_page.dart';
 import 'package:laundryminder/starting_page.dart';
 
@@ -11,9 +12,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
+        appBar: AppBar(
+          systemOverlayStyle: const SystemUiOverlayStyle(
+            statusBarColor: Colors.white,
+            statusBarIconBrightness: Brightness.dark,
+            statusBarBrightness: Brightness.light,
+          ),
+          backgroundColor: Colors.transparent,
+          shadowColor: Colors.white,
+          bottomOpacity: 0.0,
+          elevation: 0.0,
+        ),
+        body: const Center(
           child: MainPage(),
         ),
       ),
