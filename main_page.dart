@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:laundryminder/widgets/machine_card.dart';
-import 'package:laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder/widgets/utils/machine_types.dart';
+import 'widgets/machine_card.dart';
+import 'widgets/machines/machine.dart';
+import 'widgets/utils/machine_types.dart';
 import 'widgets/title_text.dart';
 
 class MainPage extends StatefulWidget {
