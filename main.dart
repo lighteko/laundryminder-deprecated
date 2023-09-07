@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'starting_page.dart';
+import 'package:laundryminder/main_page.dart';
+import 'package:laundryminder/starting_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -13,7 +14,7 @@ class MainApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: StartingPage(),
+          child: MainPage(),
         ),
       ),
     );

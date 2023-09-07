@@ -85,10 +85,10 @@ class _StartingPageState extends State<StartingPage> {
                           onPressed: () => {
                             selectDorm(0),
                           },
-                          child: const Center(
+                          child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Text(
                                   "A",
                                   style: TextStyle(
@@ -135,10 +135,10 @@ class _StartingPageState extends State<StartingPage> {
                           onPressed: () => {
                             selectDorm(1),
                           },
-                          child: const Center(
+                          child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Text(
                                   "A",
                                   style: TextStyle(
@@ -190,10 +190,10 @@ class _StartingPageState extends State<StartingPage> {
                           onPressed: () => {
                             selectDorm(2),
                           },
-                          child: const Center(
+                          child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Text(
                                   "B",
                                   style: TextStyle(
@@ -240,10 +240,10 @@ class _StartingPageState extends State<StartingPage> {
                           onPressed: () => {
                             selectDorm(3),
                           },
-                          child: const Center(
+                          child: Center(
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
+                              children: const [
                                 Text(
                                   "B",
                                   style: TextStyle(

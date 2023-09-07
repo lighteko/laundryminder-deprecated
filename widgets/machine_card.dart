@@ -1,8 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_card_types.dart';
+import 'package:laundryminder/widgets/machines/machine.dart';
+import 'package:laundryminder/widgets/utils/machine_card_types.dart';
 
 class MachineCard extends StatefulWidget {
   final int machineType;
@@ -69,8 +68,32 @@ class _MachineCardState extends State<MachineCard> {
     }
   }
 
+  // String machineName(int machineType, machineCode) {
+  //   String result;
+  //   switch (machineType) {
+  //     case MachineTypes.washer:
+  //       result = "Washer";
+  //       break;
+  //     case MachineTypes.dryer:
+  //       result = "Dryer";
+  //       break;
+  //     case MachineTypes.shoeWasher:
+  //       result = "ShoeWasher";
+  //       break;
+  //     case MachineTypes.shoeDryer:
+  //       result = "shoeDryer";
+  //       break;
+  //     default:
+  //   }
+  //   return result;
+  // }
+
   String timeString(int totalTime) {
-    return "${totalTime ~/ 60} m ${totalTime % 60} s";
+    int hours = totalTime ~/ 60;
+    if (totalTime < 0) {
+      return "Vacant";
+    }
+    return "$hours m ${totalTime % 60} s";
   }
 
   void onTick(Timer timer) {
@@ -119,7 +142,7 @@ class _MachineCardState extends State<MachineCard> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Washer No.2",
+                  "Washer 01",
                   style: TextStyle(
                     fontSize: 24,
                     fontWeight: FontWeight.bold,

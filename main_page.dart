@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machine_card.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder_testplace/laundryminder/widgets/utils/machine_types.dart';
+import 'package:laundryminder/widgets/machine_card.dart';
+import 'package:laundryminder/widgets/machines/machine.dart';
+import 'package:laundryminder/widgets/utils/machine_types.dart';
 import 'widgets/title_text.dart';
 
 class MainPage extends StatefulWidget {
@@ -29,18 +29,18 @@ class _MainPageState extends State<MainPage> {
           bottomOpacity: 0.0,
           elevation: 0.0,
         ),
-        body: const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 30),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleText(text: "Recently used"),
+              const TitleText(text: "Recently used"),
               Padding(
-                padding: EdgeInsets.symmetric(
+                padding: const EdgeInsets.symmetric(
                   vertical: 15,
                 ),
                 child: Row(
-                  children: [
+                  children: const [
                     Machine(
                       size: 45,
                       code: 1,
@@ -68,19 +68,19 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
-              TitleText(text: "Currently using"),
-              Padding(
+              const TitleText(text: "Currently using"),
+              const Padding(
                 padding: EdgeInsets.symmetric(vertical: 15),
                 child: MachineCard(
                   machineType: MachineTypes.washer,
                   isUsing: true,
                 ),
               ),
-              TitleText(text: "Machines"),
+              const TitleText(text: "Machines"),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15),
+                padding: const EdgeInsets.symmetric(vertical: 15),
                 child: Column(
-                  children: [
+                  children: const [
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 8),
                       child: MachineCard(
