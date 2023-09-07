@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:laundryminder/widgets/machines/dryer.dart';
-import 'package:laundryminder/widgets/utils/machine_types.dart';
-import 'package:laundryminder/widgets/machines/shoe_dryer.dart';
-import 'package:laundryminder/widgets/machines/shoe_washer.dart';
-import 'package:laundryminder/widgets/machines/washer.dart';
+import 'dryer.dart';
+import '../utils/machine_types.dart';
+import 'shoe_dryer.dart';
+import 'shoe_washer.dart';
+import 'washer.dart';
 
 class Machine extends StatelessWidget {
   final bool isRunning;

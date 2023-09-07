@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:laundryminder/main_page.dart';
-import 'package:laundryminder/starting_page.dart';
+import 'main_page.dart';
+import 'starting_page.dart';
 
 void main() {
   runApp(const MainApp());

@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:laundryminder/widgets/machines/machine.dart';
-import 'package:laundryminder/widgets/utils/machine_card_types.dart';
+import 'machines/machine.dart';
+import 'utils/machine_card_types.dart';
 
 class MachineCard extends StatefulWidget {
   final int machineType;
