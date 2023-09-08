@@ -5,7 +5,6 @@ import 'main_page.dart';
 // import 'starting_page.dart';
 
 void main() {
-  ApiService().getMachinesByDorm(3);
   runApp(const MainApp());
 }
 

@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 class ApiService {
@@ -9,7 +11,10 @@ class ApiService {
     final url = Uri.parse('$baseUrl/$machines');
     final response = await http.get(url);
     if (response.statusCode == 200) {
-      print(response.body);
+      final List<dynamic> machines = jsonDecode(response.body);
+      for (var machine in machines) {
+        print(machine);
+      }
       return;
     }
     throw Error();
@@ -19,7 +24,7 @@ class ApiService {
     final url = Uri.parse('$baseUrl/$machines/$dormId');
     final response = await http.get(url);
     if (response.statusCode == 200) {
-      print(response.body);
+      jsonDecode(response.body);
       return;
     }
     throw Error();
