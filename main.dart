@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:laundryminder_testplace/laundryminder/services/api_service.dart';
 import 'main_page.dart';
-import 'starting_page.dart';
+// import 'starting_page.dart';
 
 void main() {
+  ApiService().getMachinesByDorm(3);
   runApp(const MainApp());
 }
 
