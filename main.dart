@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:laundryminder_testplace/laundryminder/services/api_service.dart';
 import 'main_page.dart';
 // import 'starting_page.dart';
 
@@ -26,7 +25,7 @@ class MainApp extends StatelessWidget {
           bottomOpacity: 0.0,
           elevation: 0.0,
         ),
-        body: const Center(
+        body: Center(
           child: MainPage(),
         ),
       ),
