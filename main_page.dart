@@ -27,9 +27,9 @@ class MainPage extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    TitleText(text: "Recently used"),
+                    const TitleText(text: "Recently used"),
                     Padding(
-                      padding: EdgeInsets.symmetric(
+                      padding: const EdgeInsets.symmetric(
                         vertical: 15,
                       ),
                       child: RecentlyUsed(),
