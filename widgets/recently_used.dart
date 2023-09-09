@@ -33,6 +33,7 @@ class RecentlyUsed extends StatelessWidget {
       builder: (context, AsyncSnapshot snapshot) {
         if (snapshot.hasData) {
           return ListView.separated(
+            scrollDirection: Axis.horizontal,
             itemCount: 3,
             itemBuilder: (context, index) {
               var machine = snapshot.data![index];
